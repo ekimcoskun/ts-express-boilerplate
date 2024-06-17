@@ -5,7 +5,7 @@ export class UserService implements IUserService {
     login(email: string, password: string): Promise<string> {
         throw new Error("Method not implemented.");
     }
-    register(name: string, email: string, password: string, role: string, phoneNumber: string): Promise<string> {
+    register(name: string, email: string, password: string, phoneNumber: string): Promise<string> {
         throw new Error("Method not implemented.");
     }
     getAllUsers(): Promise<User[]> {
