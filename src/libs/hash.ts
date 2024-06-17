@@ -6,14 +6,14 @@ import bcrypt from 'bcrypt';
 export class Hash implements IHash {
     async hashPassword(password: string): Promise<string> {
         const result = await bcrypt.hash(password, 10);
-        if(result) {
+        if (result) {
             return result;
-        }else {
+        } else {
             throw new Error("Error hashing password");
         }
     }
     async comparePassword(password: string, hash: string): Promise<boolean> {
         return await bcrypt.compare(password, hash);
     }
-    
+
 }

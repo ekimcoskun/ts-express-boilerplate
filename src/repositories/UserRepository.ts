@@ -5,7 +5,7 @@ export class UserRepository implements IUserRepository {
     login(email: string): Promise<User> {
         throw new Error("Method not implemented.");
     }
-    register(name: string, email: string, password: string,  phoneNumber: string): Promise<string> {
+    register(name: string, email: string, password: string, phoneNumber: string): Promise<string> {
         throw new Error("Method not implemented.");
     }
     getAllUsers(): Promise<User[]> {
