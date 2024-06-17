@@ -1,6 +1,8 @@
+import { injectable } from "inversify";
 import { User } from "../entities/User";
 import { IUserRepository } from "../interfaces/User/IUserRepository";
 
+@injectable()
 export class UserRepository implements IUserRepository {
     login(email: string): Promise<User> {
         throw new Error("Method not implemented.");

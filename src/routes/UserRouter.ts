@@ -21,4 +21,10 @@ container.bind(INTERFACE_TYPE.Hash).to(Hash);
 
 const controller = container.get<UserController>(INTERFACE_TYPE.UserController);
 
+userRouter.post("/login", controller.onLogin.bind(controller));
+userRouter.post("/register", controller.onRegister.bind(controller));
+userRouter.get("/getAll", controller.onGetAllUsers.bind(controller));
+userRouter.put("/update", controller.onUpdateUser.bind(controller));
+userRouter.delete("/delete", controller.onDeleteUser.bind(controller));
+
 export default userRouter;
